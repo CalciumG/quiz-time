@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Questionaire from "./Questionaire";
 
 const url =
-  "https://opentdb.com/api.php?amount=10&category=10&difficulty=easy&type=multiple";
+  "https://opentdb.com/api.php?amount=10&category=10&difficulty=medium&type=multiple";
 
 function Quiz(props) {
   const [questions, setQuestions] = useState([]);
@@ -42,7 +42,7 @@ function Quiz(props) {
       />
     </div>
   ) : (
-    <h1>hey bro we're loading)</h1>
+    <h1 class="text-white text-3xl">Loading...</h1>
   );
 }
 

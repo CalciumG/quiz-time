@@ -14,7 +14,7 @@ function Questionaire({
 
   return (
     <div class="container">
-      <div class="bg-white text-indigo-800 p-10 rounded-lg shadow-md text-center">
+      <div class="bg-white text-black-800 p-10 rounded-lg shadow-md text-center">
         <h1
           // dangerouslySetInnerHTML removes the issue with quotation marks coming through as a hex
           dangerouslySetInnerHTML={{ __html: question }}
@@ -28,9 +28,7 @@ function Questionaire({
         {shuffleAnswers.map((answer) => (
           <button
             dangerouslySetInnerHTML={{ __html: answer }}
-            className={`${
-              correct_answer === answer ? "bg-purple-300" : "bg-white"
-            } p-4 text-purple-800 font-semibold rounded shadow`}
+            class="bg-white p-4 text-black-500 rounded"
             onClick={() => handleAnswer(answer)}
           />
         ))}
